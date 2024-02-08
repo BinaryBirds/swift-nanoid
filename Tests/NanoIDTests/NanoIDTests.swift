@@ -6,7 +6,7 @@ final class NanoIDTests: XCTestCase {
     func testAlphabet() {
         let id = NanoID()
 
-        for char in id.value {
+        for char in id.rawValue {
             guard NanoID.alphabet.firstIndex(of: char) != nil else {
                 return XCTFail("Invalid character")
             }
@@ -16,21 +16,21 @@ final class NanoIDTests: XCTestCase {
     func testDefaultSize() {
         let size = 21
         let id = NanoID(size: size)
-        XCTAssertEqual(id.value.count, id.size)
+        XCTAssertEqual(id.rawValue.count, id.size)
         XCTAssertEqual(size, id.size)
     }
 
     func testCustomSize() {
         let size = 4
         let id = NanoID(size: size)
-        XCTAssertEqual(id.value.count, id.size)
+        XCTAssertEqual(id.rawValue.count, id.size)
         XCTAssertEqual(size, id.size)
     }
 
     func testValidAlphabet() {
         let id = NanoID("abc")
         XCTAssertNotNil(id)
-        XCTAssertEqual(id?.value, "abc")
+        XCTAssertEqual(id?.rawValue, "abc")
         XCTAssertEqual(id?.size, 3)
         XCTAssertEqual(id?.description, "abc")
     }
@@ -58,7 +58,7 @@ final class NanoIDTests: XCTestCase {
         let jsonData = jsonString.data(using: .utf8)!
         let decoder = JSONDecoder()
         let wrapper = try decoder.decode(Wrapper.self, from: jsonData)
-        XCTAssertEqual(wrapper.id.value, "abc")
+        XCTAssertEqual(wrapper.id.rawValue, "abc")
     }
 
     func testEncodable() throws {

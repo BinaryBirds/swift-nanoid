@@ -1,5 +1,5 @@
 public struct NanoID {
-    public let value: String
+    public let rawValue: String
 
     public init(
         size: Int = 21
@@ -13,7 +13,7 @@ public struct NanoID {
             )
             value.append(Self.alphabet[index])
         }
-        self.value = value
+        self.rawValue = value
     }
 }
 
@@ -23,7 +23,7 @@ public extension NanoID {
 }
 
 public extension NanoID {
-    var size: Int { value.count }
+    var size: Int { rawValue.count }
 }
 
 extension NanoID: Sendable {}
@@ -32,7 +32,7 @@ extension NanoID: Hashable {}
 extension NanoID: Encodable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.value)
+        try container.encode(self.rawValue)
     }
 }
 extension NanoID: Decodable {
@@ -47,7 +47,7 @@ extension NanoID: Decodable {
                     """
             )
         }
-        self.value = id.value
+        self.rawValue = id.rawValue
     }
 }
 
@@ -59,10 +59,10 @@ extension NanoID: LosslessStringConvertible {
                 return nil
             }
         }
-        self.value = description
+        self.rawValue = description
     }
 
     public var description: String {
-        value
+        rawValue
     }
 }
