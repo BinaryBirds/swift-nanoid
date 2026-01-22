@@ -38,4 +38,4 @@ test:
 	swift test --parallel
 
 docker-test:
-	docker build -t feather-database-tests . -f ./docker/tests/Dockerfile && docker run --rm feather-database-tests
+	docker build -t swift-nanoid-tests . -f ./docker/tests/Dockerfile && docker run --rm swift-nanoid-tests
