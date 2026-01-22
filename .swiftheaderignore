@@ -1,3 +1,4 @@
+swift-nanoid.xctestplan
 Sources/CBCrypt/blf.h
 Sources/CBCrypt/include/module.modulemap
 Sources/CBCrypt/bcrypt.h
