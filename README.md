@@ -71,6 +71,6 @@ For more information, see the  official [NanoID documentation]("https://binarybi
 
 ## Contributing
 
-Pull requests are welcome. Please keep changes focused and include tests for new logic. 🙏
+[Pull requests](https://github.com/BinaryBirds/swift-nanoid/pulls) are welcome. Please keep changes focused and include tests for new logic. 🙏
 
 
