@@ -58,7 +58,7 @@ print(id)
 
 ## Documentation
 
-For more information, see the  official [NanoID documentation]("https://binarybirds/github.io/swift-nanoid") for this package.
+For more information, see the  official [NanoID documentation](https://binarybirds.github.io/swift-nanoid) for this package.
 
 ## Development
 
