@@ -62,15 +62,15 @@ For more information, see the  official [NanoID documentation]("https://binarybi
 
 ## Development
 
-- Build: swift build
+- Build: `swift build`
 - Test:
-    - local: swift test
-    - using Docker: make docker-test
-- Format: make format
-- Check: make check
+    - local: `swift test`
+    - using Docker: `make docker-test`
+- Format: `make format`
+- Check: `make check`
 
 ## Contributing
 
-Pull requests are welcome. Please keep changes focused and include tests for new logic. 🙏
+[Pull requests](https://github.com/BinaryBirds/swift-nanoid/pulls) are welcome. Please keep changes focused and include tests for new logic. 🙏
 
 
