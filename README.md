@@ -64,8 +64,8 @@ For more information, see the  official [NanoID documentation]("https://binarybi
 
 - Build: swift build
 - Test:
-- local: swift test
-- using Docker: make docker-test
+    - local: swift test
+    - using Docker: make docker-test
 - Format: make format
 - Check: make check
 
