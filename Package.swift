@@ -33,6 +33,9 @@ let package = Package(
     products: [
         .library(name: "NanoID", targets: ["NanoID"]),
     ],
+    dependencies: [
+        // [docc-plugin-placeholder]
+    ],
     targets: [
         .target(name: "NanoID"),
         .testTarget(
