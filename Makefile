@@ -1,7 +1,6 @@
 SHELL=/bin/bash
 
-#baseUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/main/scripts
-baseUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/fix/docc-inject/scripts
+baseUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/main/scripts
 
 check: symlinks language deps lint headers
 
