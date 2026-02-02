@@ -37,12 +37,16 @@ let package = Package(
         // [docc-plugin-placeholder]
     ],
     targets: [
-        .target(name: "NanoID"),
+        .target(
+            name: "NanoID",
+            swiftSettings: defaultSwiftSettings
+        ),
         .testTarget(
             name: "NanoIDTests",
             dependencies: [
                 .target(name: "NanoID"),
-                ]
+                ],
+            swiftSettings: defaultSwiftSettings
         ),
     ]
 )
