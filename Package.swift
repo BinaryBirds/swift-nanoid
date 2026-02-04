@@ -33,13 +33,20 @@ let package = Package(
     products: [
         .library(name: "NanoID", targets: ["NanoID"]),
     ],
+    dependencies: [
+        // [docc-plugin-placeholder]
+    ],
     targets: [
-        .target(name: "NanoID"),
+        .target(
+            name: "NanoID",
+            swiftSettings: defaultSwiftSettings
+        ),
         .testTarget(
             name: "NanoIDTests",
             dependencies: [
                 .target(name: "NanoID"),
-                ]
+                ],
+            swiftSettings: defaultSwiftSettings
         ),
     ]
 )

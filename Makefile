@@ -2,7 +2,10 @@ SHELL=/bin/bash
 
 baseUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/main/scripts
 
-check: symlinks language deps lint headers
+check: symlinks language deps lint headers docc-warnings package
+
+package:
+	curl -s $(baseUrl)/check-swift-package.sh | bash
 
 symlinks:
 	curl -s $(baseUrl)/check-broken-symlinks.sh | bash
@@ -38,4 +41,4 @@ test:
 	swift test --parallel
 
 docker-test:
-	docker build -t feather-database-tests . -f ./docker/tests/Dockerfile && docker run --rm feather-database-tests
+	docker build -t tests . -f ./docker/tests/Dockerfile && docker run --rm tests
